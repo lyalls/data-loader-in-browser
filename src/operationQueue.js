@@ -142,9 +142,7 @@ class OperationQueue {
                         } else {
                             throw 'Can NOT resolve the content type of response';
                         }
-                        
                     }
-                    
                 }
             } catch (e) {
                 // throw(e);

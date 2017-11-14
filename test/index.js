@@ -10,9 +10,9 @@ server.use(bodyParser());
 server.use(async (ctx) => {
     console.log('Incoming request:', ctx.path, ctx.method, ctx.request.body);
     if (ctx.request.path === '/loadData' && ctx.request.method.toLowerCase() === 'post') {
-        // ctx.body = {status: 'OK'};
-        ctx.type = 'text/plain'
-        ctx.body = 'OK';
+        ctx.body = {status: 'OK'};
+        // ctx.type = 'text/plain'
+        // ctx.body = 'OK';
     } else {
         ctx.body = 'Unsupported yet';
     }
