@@ -1,0 +1,31 @@
+{
+	"name": "general-data-loader-in-browser",
+	"version": "0.0.1",
+	"main": "src/index.js",
+	"scripts": {
+		"test": "mocha --require babel-core/register ./test"
+	},
+	"dependencies": {
+		"content-type-parser": "^1.0.2",
+		"isomorphic-fetch": "^2.2.1"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.26.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-env": "^1.6.1",
+		"eslint": "^4.9.0",
+		"eslint-config-airbnb": "^16.1.0",
+		"eslint-plugin-import": "^2.8.0",
+		"eslint-plugin-jsx-a11y": "^6.0.2",
+		"eslint-plugin-react": "^7.4.0",
+		"koa": "^2.4.1",
+		"koa-bodyparser": "^4.2.0",
+		"mocha": "^4.0.1"
+	},
+	"author": {
+		"name": "Lyall Sun",
+		"email": "lyall.sunlin@gmail.com"
+	},
+	"repository": "git@github.com:lyalls/general-data-loader-in-browser.git",
+	"license": "MIT"
+}
