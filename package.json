@@ -1,9 +1,11 @@
 {
 	"name": "general-data-loader-in-browser",
 	"version": "0.0.1",
-	"main": "src/index.js",
+	"main": "lib/index.js",
 	"scripts": {
-		"test": "mocha --require babel-core/register ./test"
+		"test": "mocha --require babel-core/register ./test",
+		"build": "babel -d ./lib ./src",
+		"prepublish": "npm run build"
 	},
 	"dependencies": {
 		"content-type-parser": "^1.0.2",
