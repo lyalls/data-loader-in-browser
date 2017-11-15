@@ -83,8 +83,8 @@ class OperationQueue {
             method,
             credentials,
             cache,
-        } = Object.assign({}, options, this.defaultFetchOptions);
-        const headers = Object.assign({}, (options || {}).headers, this.defaultFetchOptions.headers);
+        } = Object.assign({}, this.defaultFetchOptions, options);
+        const headers = Object.assign({}, this.defaultFetchOptions.headers, (options || {}).headers);
         // Check url
         if (!key) throw 'URL is missing';
         // Get or create queue for the URL
@@ -162,7 +162,8 @@ class OperationQueue {
     // Key for a job
     jobkey(options) {
         const { url, method } = options || {};
-        return `${(method||'get').toLowerCase()}_${url}`;
+        // return `${(method||'get').toLowerCase()}_${url}`;
+        return url || 'url';
     }
 }
 
