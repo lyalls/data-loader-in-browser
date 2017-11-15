@@ -29,6 +29,6 @@
 		"name": "Lyall Sun",
 		"email": "lyall.sunlin@gmail.com"
 	},
-	"repository": "git@github.com:lyalls/general-data-loader-in-browser.git",
+	"repository": "git@github.com:lyalls/data-loader-in-browser.git",
 	"license": "MIT"
 }
