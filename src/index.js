@@ -33,9 +33,8 @@ class DataLoader {
      * @param { url, method = 'post', credentials = 'omit', cache = 'default', headers = {'content-type': 'application/json'} } instOptions server settings
      * 
      */
-    async load(payload = {}, instOptions = {}) {
-        const options = Object.assign({}, this.options, instOptions);
-        const res = await this.operationQueue.enqueue(payload, options);
+    async load(...payload) {
+        const res = await this.operationQueue.enqueue(this.options, ...payload);
         if (res && res.status === 'success') {
             return res.response;
         } else {
